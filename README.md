@@ -3,6 +3,7 @@
 Primary sequencing data and BigWig files are deposited at the GEO depository: GSE223265.
 
 
+
 **ChIP-Rx data analysis**
 
 The paired-end ChIP-Rx reads trimmed using Trim Galore v0.6.6 (https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/) were aligned to the human hg19 and mouse mm10 assemblies using Bowtie v2.3.5.1 with default parameters (Langmead and Salzberg, 2012). We used SAMtools v1.9 (Li et al., 2009) and Picard v2.23.3 (https://broadinstitute.github.io/picard/) to remove all unmapped reads, low mapping quality reads (MAPQ < 30), and PCR duplicates. The number of spike-in mm10 reads counted by SAMtools v1.9 was used to calculate the normalization factor alpha = 1e6/mm10_count (Li et al., 2009). Normalized bigwig files, heatmaps, and metaplots were generated using deeptools v3.5.0 (Ramirez et al., 2016). 
